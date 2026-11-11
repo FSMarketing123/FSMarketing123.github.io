@@ -714,3 +714,13 @@ html.stage .tc-l{padding-bottom:22px}
 html.stage .tc-r{justify-content:flex-start; padding-top:147px; padding-bottom:53px}
 html.stage .tc-r .tc-hwe{margin-bottom:auto}
 html.stage .tc-r .tc-web{margin-top:auto}
+
+/* bio card: the label, name, title, office and email float at different depths and cast a soft shadow as the card tilts */
+.tmc .tmc-tx{translate:none}
+.tmc-tx > :is(.tmc-k,h3,.tmc-ti,.tmc-of,.tmc-em){--d:.5; translate:calc(var(--mx,0px) * var(--d)) calc(var(--my,0px) * var(--d));
+  text-shadow:calc(var(--mx,0px) * -.35) calc(var(--my,0px) * -.35 + 2px) 8px rgba(17,22,58,.16); transition:translate .6s var(--ease), text-shadow .6s var(--ease)}
+.tmc-tx > .tmc-k{--d:.35} .tmc-tx > h3{--d:.85} .tmc-tx > .tmc-ti{--d:.65} .tmc-tx > .tmc-of{--d:.5} .tmc-tx > .tmc-em{--d:.6}
+.tmc-tx > .tmc-bio{translate:calc(var(--mx,0px) * -.12) calc(var(--my,0px) * -.12); transition:translate .6s var(--ease)}
+.tmc.tilting .tmc-tx > *{transition:translate .1s linear, text-shadow .1s linear}
+@media (prefers-reduced-motion:reduce){ .tmc-tx > *{translate:none!important; text-shadow:none!important} }
+.tmc .tmc-tx > h3#tmName{--d:.85}
