@@ -412,7 +412,7 @@ function VAL(k,no,id,title,sub,hdrKind){ const v=V.views[k], M=v.metrics, tri=!!
       ${v.sens.map((s,i)=>`<tr class="${i===2?'mid':''}"><td>${usd(s[0])}</td><td>${usd(s[1])}</td><td>${pct(s[2])}</td><td>${pct(s[3])}</td></tr>`).join('')}
       <tr class="noi"><td colspan="2">Net Operating Income</td><td>${usd(v.sensNOI[0])}</td><td>${usd(v.sensNOI[1])}</td></tr></tbody></table>
       <p style="font:italic 11px/1 var(--sans);margin:8px 0 0">* Note: Includes Capex &amp; Closing Costs.</p></div>
-    <div class="ka a d3"><h5>Key Assumptions</h5><div class="btns"><button type="button" class="mini-btn calc" data-detail="calc:${k}">Cap-rate explorer</button></div><ul>${v.assumptions.map(a=>`<li>${esc(a)}</li>`).join('')}</ul></div>`}); }
+    <div class="ka a d3"><div class="ka-h"><h5>Key Assumptions</h5><div class="btns"><button type="button" class="mini-btn calc" data-detail="calc:${k}">Cap-rate explorer</button></div></div><ul>${v.assumptions.map(a=>`<li>${esc(a)}</li>`).join('')}</ul></div>`}); }
 /* financial exhibit pages */
 function SHEET(no,id,k,kind,title,hdrKind){ const v=V.views[k], R=V.returns[k], tri=!!v.scenario;
   let html='', notes=[];

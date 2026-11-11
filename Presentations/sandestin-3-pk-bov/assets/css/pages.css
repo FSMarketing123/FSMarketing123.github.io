@@ -689,3 +689,15 @@ html.flow .lv-main{overflow-x:auto} html.flow .lv-side{position:static} html.flo
 .closing .cl-lock{z-index:2}
 /* back cover: title block centred vertically in the photo */
 html.stage .closing .cl-lock{top:50%; translate:0 -50%}
+
+/* valuation pages (25, 30, 36, 42, 48): shorter Key Assumptions box, clear of the All-In Price table, content centred */
+html.stage .ka{height:284px; padding:24px 56px; display:flex; flex-direction:column; justify-content:center}
+html.stage .ka h5{margin:0 0 16px}
+html.stage .ka ul{column-gap:48px}
+html.stage .ka li:last-child{margin-bottom:0}
+html.stage .ka-h{display:flex; justify-content:space-between; align-items:center; margin:0 0 16px}
+html.stage .ka-h h5{margin:0}
+html.stage .ka .btns{position:static}
+html.stage .ka li{margin-bottom:7px; line-height:1.3!important}
+html.stage .ka-h{margin-bottom:12px}
+html.stage .ka{height:auto; min-height:284px}
