@@ -274,7 +274,6 @@ P({id:'likely-investors',no:14,ch:2,title:'Target Buyers &amp; Marketing Approac
   <p class="a d1" style="${at(50,177,729)}margin:0"><span class="tagbar">Unique HNW &amp; Owner Operators &amp; DST Buyers</span></p>
   <div class="a d1" style="${at(50,232,729)}"><div class="logos">${logoTiles(g1,'g1')}</div></div>
   <p class="a d2" style="${at(820,177,729)}margin:0"><span class="tagbar" style="background:var(--green)">Usual Suspects</span></p>
-  <p class="a d2 inv-note" style="${at(822,212,729)}">(Can use to create competition, but are not winning in this market)</p>
   <div class="a d2" style="${at(820,232,729)}"><div class="logos">${logoTiles(g2,'g2')}</div></div>
   <p class="src" style="${at(50,800,1200)}margin:0;font-size:11px">Source: BOV p. 14. Select a logo to enlarge it.</p>`,
   init(el){ el.addEventListener('click',e=>{ const b=e.target.closest('.lt'); if(b) logoOpen(b.dataset.grp,+b.dataset.i,b); });
@@ -534,7 +533,7 @@ P({id:'new-supply',no:60,ch:4,title:'South Walton / Destin New Supply',img:'mark
 
 /* p.61 closing: lockup on the sunset photograph, representatives, and the BOV itself */
 const DL=[
-  {f:'downloads/Sandestin-3-Pk-BOV-November-2026.pdf',name:'Sandestin-3-Pk-BOV-November-2026.pdf',t:'Complete BOV',s:'61 pages · 27.4 MB',full:true},
+  {f:'downloads/Sandestin-3-Pk-BOV-November-2026.pdf',name:'Sandestin-3-Pk-BOV-November-2026.pdf',t:'Complete BOV',s:'61 pages · 27.6 MB',full:true},
   {f:'downloads/parts/Sandestin-BOV-pp01-11.pdf',name:'Sandestin-BOV-pp01-11.pdf',t:'pp. 1–11 · HWE overview',s:'10.1 MB'},
   {f:'downloads/parts/Sandestin-BOV-pp12-22.pdf',name:'Sandestin-BOV-pp12-22.pdf',t:'pp. 12–22 · Sales strategy',s:'8.2 MB'},
   {f:'downloads/parts/Sandestin-BOV-pp23-53.pdf',name:'Sandestin-BOV-pp23-53.pdf',t:'pp. 23–53 · Opinion of value',s:'3.4 MB'},

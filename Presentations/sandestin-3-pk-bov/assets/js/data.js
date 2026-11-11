@@ -1,6 +1,6 @@
 /* ==========================================================================
    BOV CONTENT DATA — Hotel Portfolio at Grand Boulevard Sandestin
-   Source of truth: "P - Sandestin 3-Pk BOV - 11.05.2026 - draft 06.pdf"
+   Source of truth: "P - Sandestin 3-Pk BOV - 11.05.2026 - FINAL.pdf"
    (HWE, November 2026). Every figure carries its source page in `p`.
    Edit figures here; the page renders from this file.
    Detailed operating tables live in tables.js (generated from the PDF by
@@ -16,7 +16,7 @@ window.BOV = {
     presentedTo: "Howard Group",
     preparedBy: "Hodges Ward Elliott",
     pdf: "downloads/Sandestin-3-Pk-BOV-November-2026.pdf",
-    pdfLabel: "Sandestin 3-Pk BOV — November 2026 (draft 06)",
+    pdfLabel: "Sandestin 3-Pk BOV — November 2026 (FINAL)",
     printStamp: "Financial exhibits dated 11/4/2026 – 11/5/2026"
   },
 
@@ -99,7 +99,7 @@ window.BOV = {
     }
   ],
   upside: { p: 20, items: [
-    "Consolidated operations: an estimated $300,000 in annual savings",
+    "Consolidated operations: an estimated $300,000 – $500,000 in annual savings",
     "Courtyard repositioning to a lifestyle soft brand",
     "New revenue: parking and resort fees",
     "Seasonal beach shuttle",
@@ -194,7 +194,7 @@ window.BOV = {
     { name: "Kyle Sahlsten", title: "Senior Director", office: "Tampa", email: "ksahlsten@hodgeswardelliott.com", photo: "team-sahlsten",
       bio: "Kyle Sahlsten is a Senior Director in Hodges Ward Elliott’s Hospitality Investment Advisory practice, based in the Tampa office. He has completed 38 hotel transactions totaling more than $800 million. Before joining HWE in 2026, Mr. Sahlsten spent nearly five years at Berkadia, most recently as an Associate Director. Mr. Sahlsten earned a bachelor’s degree in accounting and a master’s in real estate from the University of Florida’s Warrington College of Business." },
     { name: "Celina Nowicki", title: "Associate", office: "Tampa", email: "cnowicki@hodgeswardelliott.com", photo: "team-nowicki",
-      bio: "Celina Nowicki is a Senior Analyst in Hodges Ward Elliott’s Hospitality Investment Advisory practice. She has four years of experience in the hotel industry and has helped close more than $150 million in hotel sales. Before joining HWE in 2025, she was a Senior Analyst on the Investments team at Rockbridge Holdings. Ms. Nowicki earned a Bachelor of Science in Finance from Miami University." }
+      bio: "Celina Nowicki is an Associate in Hodges Ward Elliott’s Hospitality Investment Advisory practice. She has four years of experience in the hotel industry and has helped close more than $150 million in hotel sales. Before joining HWE in 2025, she was a Senior Analyst on the Investments team at Rockbridge Holdings. Ms. Nowicki earned a Bachelor of Science in Finance from Miami University." }
   ],
 
   /* ---------------- Sales strategy (p13–15, 21) ---------------- */
