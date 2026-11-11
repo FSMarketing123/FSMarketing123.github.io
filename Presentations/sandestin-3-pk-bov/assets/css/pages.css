@@ -701,3 +701,7 @@ html.stage .ka .btns{position:static}
 html.stage .ka li{margin-bottom:7px; line-height:1.3!important}
 html.stage .ka-h{margin-bottom:12px}
 html.stage .ka{height:auto; min-height:284px}
+
+/* page titles: vertically centred on the green tab (tab is 30–90px) */
+/* page titles: centred vertically on the green tab (30–90px); every title is one line on the stage */
+html.stage .pg-title,html.stage .pg-title.long{top:30px; line-height:60px}
