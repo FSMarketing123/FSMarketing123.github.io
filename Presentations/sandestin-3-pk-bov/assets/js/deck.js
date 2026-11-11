@@ -266,19 +266,23 @@ P({id:'target-buyers',no:13,ch:2,title:'Target Buyers &amp; Marketing Approach',
 const g1=[['omega','Omega Hotel Group'],['chimera','Chimera Hospitality'],['sun','SUN Development & Management Corporation'],['jamsan','Jamsan Management'],['artifact-sagelane-bluelotus','Artifact · Sage Lane Partners · Blue Lotus Ventures'],['sparkghc','SparkGHC'],['ad-astra','Ad Astra Capital'],['aam15','AAM15 Real Estate Investment & Management'],['impact','Impact Properties'],['peachtree','Peachtree Group'],['driftwood','Driftwood Capital'],['nexpoint','NexPoint']];
 const g2=[['key-international','Key International'],['innisfree','Innisfree'],['baywood','Baywood Hotels'],['noble','Noble'],['prime-group','Prime Group'],['kolter','Kolter'],['apple-reit','Apple Hospitality REIT'],['awh','AWH Partners'],['magna','Magna'],['rreaf','RREAF Holdings'],['oto','oto development']];
 const WLOGO={nexpoint:'png',peachtree:'png',aam15:'png','key-international':'png',oto:'png'};
-const wlogo=k=>`assets/logos/white/${k}.${WLOGO[k]||'svg'}`;
-const logoTiles=(list,grp)=>list.map((g,i)=>`<button type="button" class="lt ${grp}" data-grp="${grp}" data-i="${i}" aria-label="Enlarge logo: ${esc(g[1])}"><img src="${wlogo(g[0])}" alt="${esc(g[1])}" loading="lazy"></button>`).join('');
+const wlogo=k=>`assets/logos/bov/${k}.png`; /* cut from the BOV p.14 artwork (tools/extract_p14_logos.py) */
+const LBOX=k=>{ const b=(window.BOV_LOGO_BOX||{})[k]; return b?` style="left:${b[0]}%;top:${b[1]}%;width:${b[2]}%;height:${b[3]}%"`:''; };
+const logoTiles=(list,grp)=>list.map((g,i)=>`<button type="button" class="lt ${grp}" data-grp="${grp}" data-i="${i}" aria-label="Enlarge logo: ${esc(g[1])}"><img src="${wlogo(g[0])}" alt="${esc(g[1])}" loading="lazy"${LBOX(g[0])}></button>`).join('');
 P({id:'likely-investors',no:14,ch:2,title:'Target Buyers &amp; Marketing Approach',t:'Likely investors',cls:'inv',
-  body:`<p class="a" style="${at(50,108,1400)}">${esc(ST.buyersNote)}</p>
-  <div class="a d1" style="${at(50,150,745)}"><p style="margin:0 0 8px"><span class="tagbar">Unique HNW &amp; Owner Operators &amp; DST Buyers</span></p><div class="logos">${logoTiles(g1,'g1')}</div></div>
-  <div class="a d2" style="${at(805,150,745)}"><p style="margin:0 0 8px;display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="tagbar" style="background:var(--green)">Usual Suspects</span><span style="font:600 11.5px/1.2 var(--sans);letter-spacing:.04em;text-transform:uppercase;color:var(--green)">(Can use to create competition, but are not winning in this market)</span></p><div class="logos">${logoTiles(g2,'g2')}</div></div>
+  body:`<p class="a" style="${at(50,118,1400)}">${esc(ST.buyersNote)}</p>
+  <p class="a d1" style="${at(50,177,729)}margin:0"><span class="tagbar">Unique HNW &amp; Owner Operators &amp; DST Buyers</span></p>
+  <div class="a d1" style="${at(50,232,729)}"><div class="logos">${logoTiles(g1,'g1')}</div></div>
+  <p class="a d2" style="${at(820,177,729)}margin:0"><span class="tagbar" style="background:var(--green)">Usual Suspects</span></p>
+  <p class="a d2 inv-note" style="${at(822,212,729)}">(Can use to create competition, but are not winning in this market)</p>
+  <div class="a d2" style="${at(820,232,729)}"><div class="logos">${logoTiles(g2,'g2')}</div></div>
   <p class="src" style="${at(50,800,1200)}margin:0;font-size:11px">Source: BOV p. 14. Select a logo to enlarge it.</p>`,
   init(el){ el.addEventListener('click',e=>{ const b=e.target.closest('.lt'); if(b) logoOpen(b.dataset.grp,+b.dataset.i,b); });
     const fit=img=>{ const t=img.closest('.lt'); const r=(img.naturalWidth||1)/(img.naturalHeight||1);
       const maxW=t.clientWidth-30, maxH=t.clientHeight-30, area=Math.min(maxW*maxH*0.36,9000);
       let h=Math.sqrt(area/r), w=h*r; if(h>maxH){ h=maxH; w=h*r; } if(w>maxW){ w=maxW; h=w/r; }
       img.style.width=w.toFixed(1)+'px'; img.style.height=h.toFixed(1)+'px'; };
-    const all=$$('.lt img',el); const run=()=>all.forEach(i=>{ if(i.complete&&i.naturalWidth) fit(i); else i.addEventListener('load',()=>fit(i),{once:true}); });
+    const all=$$('.lt img',el).filter(i=>!i.style.left); const run=()=>all.forEach(i=>{ if(i.complete&&i.naturalWidth) fit(i); else i.addEventListener('load',()=>fit(i),{once:true}); });
     all.forEach(i=>i.loading='eager'); run(); addEventListener('resize',run); }});
 /* logo viewer: the group's tile colour, a large logo, the group name; arrows step through the group */
 const LP={dlg:$('#logoPop'),grp:'g1',i:0,opener:null};

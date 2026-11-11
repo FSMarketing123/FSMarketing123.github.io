@@ -724,3 +724,11 @@ html.stage .tc-r .tc-web{margin-top:auto}
 .tmc.tilting .tmc-tx > *{transition:translate .1s linear, text-shadow .1s linear}
 @media (prefers-reduced-motion:reduce){ .tmc-tx > *{translate:none!important; text-shadow:none!important} }
 .tmc .tmc-tx > h3#tmName{--d:.85}
+
+/* p.14: logos placed exactly as in the BOV tiles; note under "Usual Suspects" as in the PDF */
+.inv .logos{gap:2px; grid-auto-rows:136px}
+html.stage .inv .lt{padding:0; display:block}
+html.stage .inv .lt img[style*="left"]{position:absolute; max-width:none; max-height:none; object-fit:contain}
+.inv-note{margin:0; font:400 13px/1.2 var(--sans); letter-spacing:.01em; text-transform:uppercase; color:#9AA0AE}
+html.flow .inv .lt img{position:static!important; width:auto!important; height:auto!important; max-width:80%; max-height:70%}
+html.flow .inv-note{position:static!important; margin:4px 0 8px}
