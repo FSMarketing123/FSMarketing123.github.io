@@ -687,3 +687,5 @@ html.flow .lv-main{overflow-x:auto} html.flow .lv-side{position:static} html.flo
 /* back cover: navy overlay on the sunset so the title, brand marks and Howard Group logo read clearly */
 .closing .ph-l::after{content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg,rgba(26,33,82,.82) 0%,rgba(35,44,100,.72) 48%,rgba(35,44,100,.5) 75%,rgba(17,22,58,.62) 100%)}
 .closing .cl-lock{z-index:2}
+/* back cover: title block centred vertically in the photo */
+html.stage .closing .cl-lock{top:50%; translate:0 -50%}
