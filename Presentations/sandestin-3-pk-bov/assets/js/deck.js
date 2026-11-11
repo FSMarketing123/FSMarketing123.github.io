@@ -271,7 +271,7 @@ const logoTiles=(list,grp)=>list.map((g,i)=>`<button type="button" class="lt ${g
 P({id:'likely-investors',no:14,ch:2,title:'Target Buyers &amp; Marketing Approach',t:'Likely investors',cls:'inv',
   body:`<p class="a" style="${at(50,108,1400)}">${esc(ST.buyersNote)}</p>
   <div class="a d1" style="${at(50,150,745)}"><p style="margin:0 0 8px"><span class="tagbar">Unique HNW &amp; Owner Operators &amp; DST Buyers</span></p><div class="logos">${logoTiles(g1,'g1')}</div></div>
-  <div class="a d2" style="${at(805,150,745)}"><p style="margin:0 0 8px;display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="tagbar" style="background:var(--green)">Usual Suspects</span></p><div class="logos">${logoTiles(g2,'g2')}</div></div>
+  <div class="a d2" style="${at(805,150,745)}"><p style="margin:0 0 8px;display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="tagbar" style="background:var(--green)">Usual Suspects</span><span style="font:600 11.5px/1.2 var(--sans);letter-spacing:.04em;text-transform:uppercase;color:var(--green)">(Can use to create competition, but are not winning in this market)</span></p><div class="logos">${logoTiles(g2,'g2')}</div></div>
   <p class="src" style="${at(50,800,1200)}margin:0;font-size:11px">Source: BOV p. 14. Select a logo to enlarge it.</p>`,
   init(el){ el.addEventListener('click',e=>{ const b=e.target.closest('.lt'); if(b) logoOpen(b.dataset.grp,+b.dataset.i,b); });
     const fit=img=>{ const t=img.closest('.lt'); const r=(img.naturalWidth||1)/(img.naturalHeight||1);
@@ -530,7 +530,7 @@ P({id:'new-supply',no:60,ch:4,title:'South Walton / Destin New Supply',img:'mark
 
 /* p.61 closing: lockup on the sunset photograph, representatives, and the BOV itself */
 const DL=[
-  {f:'downloads/Sandestin-3-Pk-BOV-November-2026.pdf',name:'Sandestin-3-Pk-BOV-November-2026.pdf',t:'Complete BOV',s:'61 pages · 27.6 MB',full:true},
+  {f:'downloads/Sandestin-3-Pk-BOV-November-2026.pdf',name:'Sandestin-3-Pk-BOV-November-2026.pdf',t:'Complete BOV',s:'61 pages · 27.4 MB',full:true},
   {f:'downloads/parts/Sandestin-BOV-pp01-11.pdf',name:'Sandestin-BOV-pp01-11.pdf',t:'pp. 1–11 · HWE overview',s:'10.1 MB'},
   {f:'downloads/parts/Sandestin-BOV-pp12-22.pdf',name:'Sandestin-BOV-pp12-22.pdf',t:'pp. 12–22 · Sales strategy',s:'8.2 MB'},
   {f:'downloads/parts/Sandestin-BOV-pp23-53.pdf',name:'Sandestin-BOV-pp23-53.pdf',t:'pp. 23–53 · Opinion of value',s:'3.4 MB'},
