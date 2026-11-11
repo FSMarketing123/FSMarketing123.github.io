@@ -683,3 +683,7 @@ html.flow .lv-main{overflow-x:auto} html.flow .lv-side{position:static} html.flo
 .motion .tmc.swap .tmc-tx,.motion .tmc.swap .tmc-ph img{animation:tmSwap .45s var(--ease)}
 @media (max-width:820px){ .tmc{grid-template-columns:1fr} .tmc-ph{min-height:300px} .tmc-tx{padding:26px 24px} .tmc-tx h3{font-size:30px} #tmPop .pv{left:6px; top:150px} #tmPop .nx{right:6px; top:150px} #tmPop .x{top:-54px} }
 @media (prefers-reduced-motion:reduce){ .tm .hs.tilt,.tmc{transform:none!important} .tilt .dots,.tilt img,.tmc-tx{translate:none!important} #tmPop[open],.tmc-ph img{animation:none!important} }
+
+/* back cover: navy overlay on the sunset so the title, brand marks and Howard Group logo read clearly */
+.closing .ph-l::after{content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg,rgba(26,33,82,.82) 0%,rgba(35,44,100,.72) 48%,rgba(35,44,100,.5) 75%,rgba(17,22,58,.62) 100%)}
+.closing .cl-lock{z-index:2}
