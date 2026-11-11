@@ -710,3 +710,7 @@ html.stage .pg-title,html.stage .pg-title.long{top:30px; line-height:60px}
 html.stage .tc-l .tc-h + .tc-g{margin-top:auto}
 html.stage .tc-l .tc-g:last-of-type{margin-bottom:auto}
 html.stage .tc-l{padding-bottom:22px}
+/* p.2 right panel: HWE logo level with the first contents section, website level with the last entry, representatives centred between */
+html.stage .tc-r{justify-content:flex-start; padding-top:147px; padding-bottom:53px}
+html.stage .tc-r .tc-hwe{margin-bottom:auto}
+html.stage .tc-r .tc-web{margin-top:auto}
