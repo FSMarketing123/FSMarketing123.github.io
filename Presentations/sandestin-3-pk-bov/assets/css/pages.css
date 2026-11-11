@@ -705,3 +705,8 @@ html.stage .ka{height:auto; min-height:284px}
 /* page titles: vertically centred on the green tab (tab is 30–90px) */
 /* page titles: centred vertically on the green tab (30–90px); every title is one line on the stage */
 html.stage .pg-title,html.stage .pg-title.long{top:30px; line-height:60px}
+
+/* p.2 contents: the four sections sit centred in the space between the CONTENTS title and the bottom of the page */
+html.stage .tc-l .tc-h + .tc-g{margin-top:auto}
+html.stage .tc-l .tc-g:last-of-type{margin-bottom:auto}
+html.stage .tc-l{padding-bottom:22px}
