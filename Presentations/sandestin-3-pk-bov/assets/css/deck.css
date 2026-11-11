@@ -705,3 +705,25 @@ dialog::backdrop{background:rgba(10,12,30,.72)}
 #present .pr-go{font:600 15px/1 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:#fff; background:var(--green); border:0; border-radius:999px; padding:18px 34px; cursor:pointer; box-shadow:0 10px 30px rgba(0,0,0,.35); transition:transform .2s var(--ease), background .2s}
 #present .pr-go:hover,#present .pr-go:focus-visible{transform:translateY(-2px); background:#74B81A; outline:none}
 #present .pr-h{margin:26px 0 0; font-size:13px; color:rgba(255,255,255,.6)}
+
+/* ================= scale transitions (replace the sideways slide) =================
+   Forward: the new slide grows in from slightly smaller while the old one grows past and fades.
+   Back: the reverse. Content blocks and photographs scale into place instead of sliding. */
+.motion .s{transform:scale(.965); transition:opacity .7s var(--ease), transform .8s var(--ease), visibility 0s .8s}
+.motion .s.on{transform:none; transition:opacity .7s var(--ease), transform .8s var(--ease), visibility 0s}
+.motion .s[data-enter=back]:not(.on){transform:scale(1.035)}
+.motion .s.leaving[data-exit=fwd]{transform:scale(1.035)}
+.motion .s.leaving[data-exit=back]{transform:scale(.965)}
+.motion .s[data-enter=fwd] .a{transform:scale(.92)}
+.motion .s[data-enter=back] .a{transform:scale(1.06)}
+.motion .s[data-enter=fwd] .px{transform:scale(1.14)}
+.motion .s[data-enter=back] .px{transform:scale(.98)}
+.motion .s.leaving[data-exit=fwd] .px{transform:scale(1.08); transition:transform .9s var(--ease)}
+.motion .s.leaving[data-exit=back] .px{transform:scale(1); transition:transform .9s var(--ease)}
+.motion .s.go-now{transition:none!important}
+html.flow.motion .s,html.flow.motion .s.leaving{transform:none!important}
+html.flow.motion .s[data-enter] .a{transform:scale(.97)}
+.motion .s.on[data-enter]{transform:none}
+.motion .s.on[data-enter] .a{transform:none}
+.motion .s.on[data-enter] .px{transform:translate3d(var(--mx,0px),var(--my,0px),0) scale(1.03)}
+html.flow.motion .s.on[data-enter] .a{transform:none}
